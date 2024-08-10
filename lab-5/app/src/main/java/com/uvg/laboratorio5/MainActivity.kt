@@ -7,11 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.uvg.laboratorio5.layout.Agosto5
 import com.uvg.laboratorio5.layout.MainLayout
 import com.uvg.laboratorio5.ui.theme.Laboratorio5Theme
 
