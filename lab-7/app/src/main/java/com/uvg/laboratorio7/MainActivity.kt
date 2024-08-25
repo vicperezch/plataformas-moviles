@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.uvg.laboratorio7.layout.NotificationLayout
@@ -21,8 +22,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             Laboratorio7Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    val notifications = rememberSaveable {
+                        generateFakeNotifications()
+                    }
+
                     NotificationLayout(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+                        notifications = notifications
                     )
                 }
             }
